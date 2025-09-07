@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>WebRTC AV Player</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 1rem; }
+    video { width: 640px; height: 360px; background: #000; border-radius: 12px; }
+    button { padding: 0.5rem 1rem; margin-top: 1rem; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <h2>🎞️ WebRTC 音视频播放</h2>
+  <video id="video" playsinline autoplay controls></video>
+  <br/>
+  <button id="start">开始播放</button>
+
+<script>
+(async () => {
+  const pc = new RTCPeerConnection({
+    iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
+  });
+
+  // 向 SDP 中声明“我只接收”音频和视频
+  pc.addTransceiver('video', { direction: 'recvonly' });
+  pc.addTransceiver('audio', { direction: 'recvonly' });
+
+  const videoElem = document.getElementById("video");
+  const remoteStream = new MediaStream();
+  pc.addEventListener("track", (event) => {
+    remoteStream.addTrack(event.track);
+    if (videoElem.srcObject !== remoteStream) {
+      videoElem.srcObject = remoteStream;
+    }
+  });
+
+  async function waitForIce() {
+    if (pc.iceGatheringState === "complete") return;
+    await new Promise(resolve => {
+      pc.addEventListener("icegatheringstatechange", () => {
+        if (pc.iceGatheringState === "complete") resolve();
+      });
+    });
+  }
+
+  async function start() {
+    await pc.setLocalDescription(await pc.createOffer());
+    await waitForIce();
+
+    const response = await fetch("/offer", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(pc.localDescription)
+    });
+    const answer = await response.json();
+    await pc.setRemoteDescription(answer);
+  }
+
+  document.getElementById("start").addEventListener("click", start);
+})();
+</script>
+</body>
+</html>

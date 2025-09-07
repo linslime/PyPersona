@@ -1,0 +1,113 @@
+nohup: ignoring input
+/home/linslime/code/PyPersona/ER-NeRF/nerf_triplane/utils.py:171: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @torch.cuda.amp.autocast(enabled=False)
+/home/linslime/code/PyPersona/ER-NeRF/nerf_triplane/utils.py:199: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @torch.cuda.amp.autocast(enabled=False)
+/home/linslime/code/PyPersona/ER-NeRF/nerf_triplane/utils.py:230: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @torch.cuda.amp.autocast(enabled=False)
+/home/linslime/code/PyPersona/ER-NeRF/nerf_triplane/utils.py:239: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @torch.cuda.amp.autocast(enabled=False)
+/home/linslime/code/PyPersona/ER-NeRF/nerf_triplane/utils.py:248: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  @torch.cuda.amp.autocast(enabled=False)
+W0906 22:25:50.423000 135367 site-packages/torch/utils/cpp_extension.py:2425] TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+W0906 22:25:50.423000 135367 site-packages/torch/utils/cpp_extension.py:2425] If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'] to specific architectures.
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:20: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:53: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:130: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:159: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:188: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:265: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_xyzs, grad_dirs, grad_deltas, grad_rays):
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:285: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:321: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_weights_sum, grad_ambient_sum, grad_depth, grad_image):
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:349: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:403: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32) # need to cast sigmas & rgbs to float
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:428: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32) # need to cast sigmas & rgbs to float
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:444: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:480: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_weights_sum, grad_ambient_sum, grad_depth, grad_image):
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:505: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32) # need to cast sigmas & rgbs to float
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:518: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:556: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_weights_sum, grad_ambient_sum, grad_uncertainty_sum, grad_depth, grad_image):
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:583: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32) # need to cast sigmas & rgbs to float
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:596: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:636: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_weights_sum, grad_amb_aud_sum, grad_amb_eye_sum, grad_uncertainty_sum, grad_depth, grad_image):
+/home/linslime/code/PyPersona/ER-NeRF/raymarching/raymarching.py:665: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32) # need to cast sigmas & rgbs to float
+W0906 22:25:50.492000 135367 site-packages/torch/utils/cpp_extension.py:2425] TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+W0906 22:25:50.492000 135367 site-packages/torch/utils/cpp_extension.py:2425] If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'] to specific architectures.
+Namespace(path='data/obama/', O=True, test=True, test_train=True, data_range=[0, -1], workspace='trial_obama_torso/', seed=0, iters=200000, lr=0.01, lr_net=0.001, ckpt='latest', num_rays=65536, cuda_ray=True, max_steps=16, num_steps=16, upsample_steps=0, update_extra_interval=16, max_ray_batch=4096, warmup_step=10000, amb_aud_loss=1, amb_eye_loss=1, unc_loss=1, lambda_amb=0.0001, fp16=True, bg_img='', fbg=False, exp_eye=True, fix_eye=-1, smooth_eye=False, torso_shrink=0.8, color_space='srgb', preload=0, bound=1, scale=4, offset=[0, 0, 0], dt_gamma=0.00390625, min_near=0.05, density_thresh=10, density_thresh_torso=0.01, patch_size=1, init_lips=False, finetune_lips=False, smooth_lips=False, torso=True, head_ckpt='', gui=False, W=450, H=450, radius=3.35, fovy=21.24, max_spp=1, att=2, aud='data/sample_audio_hu.npy', emb=False, ind_dim=4, ind_num=10000, ind_dim_torso=8, amb_dim=2, part=False, part2=False, train_camera=False, smooth_path=False, smooth_path_window=7, asr=False, asr_wav='', asr_play=False, asr_model='deepspeech', asr_save_feats=False, fps=50, l=10, m=50, r=10)
+/home/linslime/code/PyPersona/ER-NeRF/gridencoder/grid.py:22: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(ctx, inputs, embeddings, offsets, per_level_scale, base_resolution, calc_grad_inputs=False, gridtype=0, align_corners=False):
+/home/linslime/code/PyPersona/ER-NeRF/gridencoder/grid.py:63: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad):
+W0906 22:25:50.524000 135367 site-packages/torch/utils/cpp_extension.py:2425] TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+W0906 22:25:50.524000 135367 site-packages/torch/utils/cpp_extension.py:2425] If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'] to specific architectures.
+/home/linslime/code/PyPersona/ER-NeRF/shencoder/sphere_harmonics.py:16: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32) # force float32 for better precision
+/home/linslime/code/PyPersona/ER-NeRF/shencoder/sphere_harmonics.py:42: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad):
+W0906 22:25:50.576000 135367 site-packages/torch/utils/cpp_extension.py:2425] TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+W0906 22:25:50.576000 135367 site-packages/torch/utils/cpp_extension.py:2425] If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'] to specific architectures.
+/home/linslime/code/PyPersona/ER-NeRF/freqencoder/freq.py:17: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32) # force float32 for better precision
+/home/linslime/code/PyPersona/ER-NeRF/freqencoder/freq.py:39: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad):
+/home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/linslime/code/PyPersona/ER-NeRF/nerf_triplane/utils.py:649: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = torch.cuda.amp.GradScaler(enabled=self.fp16)
+/home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages/lpips/weights/v0.1/alex.pth
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages/lpips/weights/v0.1/alex.pth
+[INFO] Trainer: ngp | 2025-09-06_22-25-51 | cuda | fp16 | trial_obama_torso/
+[INFO] #parameters: 1787681
+[INFO] Loading latest checkpoint ...
+[INFO] Latest checkpoint is trial_obama_torso/checkpoints/ngp_ep0028.pth
+[INFO] loaded model.
+[INFO] load at epoch 28, global step 203616
+[WARN] Failed to load optimizer.
+[INFO] loaded scheduler.
+[INFO] loaded scaler.
+[INFO] load 7272 train frames.
+[INFO] load data/sample_audio_hu.npy aud_features: torch.Size([689, 1024, 2])
+Traceback (most recent call last):
+  File "/home/linslime/code/PyPersona/ER-NeRF/main.py", line 185, in <module>
+    test_set = NeRFDataset(opt, device=device, type='train')
+  File "/home/linslime/code/PyPersona/ER-NeRF/nerf_triplane/provider.py", line 425, in __init__
+    au_blink_info=pd.read_csv(os.path.join(self.root_path, 'au.csv'))
+  File "/home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/obama/au.csv'

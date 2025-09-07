@@ -1,0 +1,19 @@
+nohup: ignoring input
+Collecting git+https://github.com/facebookresearch/pytorch3d.git
+  Cloning https://github.com/facebookresearch/pytorch3d.git to /tmp/pip-req-build-qsxxh16x
+  Running command git clone --filter=blob:none --quiet https://github.com/facebookresearch/pytorch3d.git /tmp/pip-req-build-qsxxh16x
+  Resolved https://github.com/facebookresearch/pytorch3d.git to commit d098beb7a7f92ee226de97b1b7905ee735aeed56
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting iopath (from pytorch3d==0.7.8)
+  Using cached iopath-0.1.10.tar.gz (42 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: tqdm in /home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages (from iopath->pytorch3d==0.7.8) (4.67.1)
+Requirement already satisfied: typing_extensions in /home/linslime/miniconda3/envs/PyPersona/lib/python3.10/site-packages (from iopath->pytorch3d==0.7.8) (4.15.0)
+Collecting portalocker (from iopath->pytorch3d==0.7.8)
+  Using cached portalocker-3.2.0-py3-none-any.whl.metadata (8.7 kB)
+Using cached portalocker-3.2.0-py3-none-any.whl (22 kB)
+Building wheels for collected packages: pytorch3d, iopath
+  DEPRECATION: Building 'pytorch3d' using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of 'pytorch3d'. Discussion can be found at https://github.com/pypa/pip/issues/6334
+  Building wheel for pytorch3d (setup.py): started
