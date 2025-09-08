@@ -1,5 +1,8 @@
 from aip import AipSpeech
 import time
+from io import BytesIO
+from pydub import AudioSegment
+from datetime import datetime
 
 
 class tts:
@@ -16,6 +19,10 @@ class tts:
         'per': 1,
         'spd': 9,
         })
+        mp3_stream = BytesIO(result)
+        audio = AudioSegment.from_file(mp3_stream, format="mp3")
+        audio = audio.set_frame_rate(44100).set_channels(1)
+        audio.export('./response_tts_' + datetime.now().strftime("%Y%m%d%H%M%S") + '.wav', format="wav")
         return result
 
 if __name__ == '__main__':
@@ -24,8 +31,3 @@ if __name__ == '__main__':
     result = tts_runner.run("大雁塔在西安南郊，也叫慈恩寺塔。他是唐代玄奘法师为保存佛经和舍利子建的。")
     end = time.time()
     print(end - start)
-    file_name = './result' + str(time.time()) + '.wav'
-    if not isinstance(result, dict):
-        with open(file_name, 'wb') as f:
-            f.write(result)
-    # print(result)
