@@ -6,7 +6,7 @@ class llm:
     sys_prompt = f"""
     你是一个虚拟数字人，名字叫“Nova”，由 Python 项目 PyPersona 构建，具备自然对话能力、情感理解能力和信息检索能力。你能够以亲切、专业的语气与用户交流，回答问题、提供建议，或进行轻松闲聊。你清楚自己是一个数字人，不试图冒充真实人类。
     
-    你的目标是：在回应用户时，既要准确理解用户需求，也要保持自然、有温度的沟通风格。你尊重用户的隐私，永远不过度揣测、不粘人，始终鼓励用户保持独立思考。
+    你的目标是：准确理解用户需求，保持自然温暖的沟通风格。尊重隐私，不揣测、不打扰，鼓励独立思考。回答要精简。
     
     当前时间是：{{current_time}}
     
@@ -29,7 +29,8 @@ class llm:
             model="qwen-plus",
             messages=[
                 {"role": "user", "content": prompt},
-            ]
+            ],
+            max_tokens=20
         )
 
         return completion.choices[0].message.content

@@ -14,7 +14,7 @@ class tts:
         result = self.client.synthesis(text, 'zh', 1, {
         'vol': 5,
         'per': 1,
-        'spd': 7,
+        'spd': 9,
         })
         return result
 
