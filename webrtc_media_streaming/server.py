@@ -6,10 +6,78 @@
 import argparse
 import asyncio
 from pathlib import Path
-
+from AudioDynamicRecorder import AudioDynamicRecorder
 from aiohttp import web
 from aiortc import RTCPeerConnection, RTCSessionDescription
 from aiortc.contrib.media import MediaPlayer, MediaRelay
+import numpy as np
+from av import VideoFrame
+from av import AudioFrame
+from dataclasses import dataclass
+from aiortc.contrib.media import MediaPlayer, MediaStreamTrack
+from fractions import Fraction
+# ===============================
+# 你的异步队列（在别处生产帧后 put 进来）
+# ===============================
+video_queue: "asyncio.Queue[VideoPacket]" = asyncio.Queue()
+audio_queue: "asyncio.Queue[AudioPacket]" = asyncio.Queue()
+
+
+# ===============================
+# 队列内数据结构（包含时间戳）
+# ===============================
+@dataclass
+class VideoPacket:
+    array: np.ndarray                  # HxWx3 uint8 (bgr24 或 rgb24)
+    pts: int                           # 与 time_base 对应的时间戳
+    time_base: Fraction                # 例如 Fraction(1, 90000) 或 Fraction(1, 1000)
+    format: str = "bgr24"              # 'bgr24' 或 'rgb24'
+
+
+@dataclass
+class AudioPacket:
+    pcm: np.ndarray                    # (channels, samples) int16
+    sample_rate: int                   # 典型 48000
+    channels: int                      # 典型 2
+    pts: int                           # 累计采样数更稳
+    time_base: Fraction                # Fraction(1, sample_rate)
+
+
+# ===============================
+# 从队列读取的自定义 Track
+# ===============================
+class QueueVideoTrack(MediaStreamTrack):
+    kind = "video"
+
+    def __init__(self, queue: asyncio.Queue, fallback_fps: int = 30):
+        super().__init__()
+        self.queue = queue
+        self.fallback_dt = 1.0 / fallback_fps
+
+    async def recv(self) -> VideoFrame:
+        pkt: VideoPacket = await self.queue.get()
+        vf = VideoFrame.from_ndarray(pkt.array, format(pkt.format))
+        vf.pts = pkt.pts
+        vf.time_base = pkt.time_base
+        return vf
+
+class QueueAudioTrack(MediaStreamTrack):
+    kind = "audio"
+    def __init__(self, queue: asyncio.Queue):
+        super().__init__()
+        self.queue = queue
+
+    async def recv(self) -> AudioFrame:
+        pkt: AudioPacket = await self.queue.get()
+        af = AudioFrame(format="s16", layout=f"{pkt.channels}c", samples=pkt.pcm.shape[1])
+        for ch in range(pkt.channels):
+            af.planes[ch].update(pkt.pcm[ch].tobytes())
+        af.sample_rate = pkt.sample_rate
+        af.pts = pkt.pts
+        af.time_base = pkt.time_base
+        return af
+
+
 
 pcs = set()                  # 活跃的 PeerConnections
 relay = MediaRelay()         # 多客户端复用同一解码源
@@ -28,6 +96,13 @@ async def offer(request: web.Request):
     pc = RTCPeerConnection()
     pcs.add(pc)
     print("Created PC %s" % id(pc))
+
+    @pc.on("track")
+    async def on_track(track):
+        print("======= received track: ", track)
+        if track.kind == "audio":
+            adr = AudioDynamicRecorder(track)
+            await adr.start()
 
     # 当连接状态变化时清理
     @pc.on("connectionstatechange")

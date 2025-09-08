@@ -9,11 +9,10 @@
       <change afterPath="$PROJECT_DIR$/data/response_tts_20250908165953.npy" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/response_tts_20250908165953.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dialogue/tts/result1757321640.7404819.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/AudioDynamicRecorder.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/demo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dialogue/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogue/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dialogue/llm/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogue/llm/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dialogue/tts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/dialogue/tts/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webrtc_media_streaming/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/webrtc_media_streaming/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +234,7 @@
       <updated>1757257122379</updated>
       <workItem from="1757257123423" duration="407000" />
       <workItem from="1757257538340" duration="3019000" />
-      <workItem from="1757315134204" duration="6655000" />
+      <workItem from="1757315134204" duration="18205000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -269,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757318479317</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=".">
+      <option name="closed" value="true" />
+      <created>1757323179939</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1757323179939</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
