@@ -6,35 +6,56 @@
   <style>
     body { font-family: Arial, sans-serif; padding: 1rem; }
     video { width: 640px; height: 360px; background: #000; border-radius: 12px; }
-    button { padding: 0.5rem 1rem; margin-top: 1rem; font-size: 1rem; }
+    button { padding: 0.5rem 1rem; margin-top: 1rem; font-size: 1rem; margin-right: .5rem; }
+    #log { margin-top: .5rem; color: #666; font-size: .9rem;}
   </style>
 </head>
 <body>
-  <h2>🎞️ WebRTC 音视频播放</h2>
+  <h2>🎞️ WebRTC 音视频播放（含麦克风上行）</h2>
   <video id="video" playsinline autoplay controls></video>
   <br/>
-  <button id="start">开始播放</button>
+  <button id="start">开始</button>
+  <button id="stop" disabled>结束</button>
+  <button id="mute" disabled>静音本地麦克风</button>
+  <div id="log"></div>
 
 <script>
-(async () => {
-  const pc = new RTCPeerConnection({
-    iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
-  });
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const log = (...args) => { $('log').textContent = args.join(' '); };
 
-  // 向 SDP 中声明“我只接收”音频和视频
-  pc.addTransceiver('video', { direction: 'recvonly' });
-  pc.addTransceiver('audio', { direction: 'recvonly' });
+  let pc = null;
+  let audioTransceiver = null;
+  let localMicTrack = null;
+  let remoteStream = null;
 
-  const videoElem = document.getElementById("video");
-  const remoteStream = new MediaStream();
-  pc.addEventListener("track", (event) => {
-    remoteStream.addTrack(event.track);
-    if (videoElem.srcObject !== remoteStream) {
-      videoElem.srcObject = remoteStream;
-    }
-  });
+  const videoElem = $('video');
 
-  async function waitForIce() {
+  function setUIState(running) {
+    $('start').disabled = running;
+    $('stop').disabled = !running;
+    $('mute').disabled = !running || !localMicTrack;
+    $('mute').textContent = (localMicTrack && localMicTrack.enabled) ? '静音本地麦克风' : '取消静音';
+  }
+
+  function attachRemoteTrackEvents() {
+    remoteStream = new MediaStream();
+    pc.addEventListener("track", (event) => {
+      remoteStream.addTrack(event.track);
+      if (videoElem.srcObject !== remoteStream) {
+        videoElem.srcObject = remoteStream;
+      }
+    });
+  }
+
+  function addTransceivers() {
+    // 下行：只接收视频
+    pc.addTransceiver('video', { direction: 'recvonly' });
+    // 音频：默认双向（既接收后端音频，又发送本地麦克风）
+    audioTransceiver = pc.addTransceiver('audio', { direction: 'sendrecv' });
+  }
+
+  async function waitForIceComplete() {
     if (pc.iceGatheringState === "complete") return;
     await new Promise(resolve => {
       pc.addEventListener("icegatheringstatechange", () => {
@@ -43,20 +64,110 @@
     });
   }
 
-  async function start() {
-    await pc.setLocalDescription(await pc.createOffer());
-    await waitForIce();
+  async function startSession() {
+    if (pc) return; // 已在运行
+    log('初始化会话…');
 
-    const response = await fetch("/offer", {
+    pc = new RTCPeerConnection({
+      iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
+    });
+
+    // 结束/失败时的清理
+    pc.addEventListener('connectionstatechange', () => {
+      if (['failed','closed','disconnected'].includes(pc.connectionState)) {
+        stopSession(/*fromStateChange*/true);
+      }
+    });
+
+    attachRemoteTrackEvents();
+    addTransceivers();
+
+    // 申请本地麦克风并绑定到发送端；用户拒绝时降级为仅接收
+    localMicTrack = null;
+    try {
+      log('请求麦克风权限…');
+      const micStream = await navigator.mediaDevices.getUserMedia({
+        audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true }
+      });
+      localMicTrack = micStream.getAudioTracks()[0];
+      await audioTransceiver.sender.replaceTrack(localMicTrack);
+      log('已获取麦克风，建立连接…');
+    } catch (err) {
+      console.warn('getUserMedia 失败：', err);
+      log('麦克风不可用：仅播放远端音视频。');
+      try {
+        await audioTransceiver.sender.replaceTrack(null);
+        audioTransceiver.direction = 'recvonly';
+      } catch (_) {}
+    }
+
+    // SDP 交换
+    await pc.setLocalDescription(await pc.createOffer());
+    await waitForIceComplete();
+
+    const resp = await fetch("/offer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(pc.localDescription)
     });
-    const answer = await response.json();
+
+    if (!resp.ok) {
+      log('信令失败：', resp.status, await resp.text());
+      // 出错立即收尾
+      await stopSession();
+      return;
+    }
+
+    const answer = await resp.json();
     await pc.setRemoteDescription(answer);
+
+    setUIState(true);
+    log('连接已建立 ✅ 正在收/发音视频…');
   }
 
-  document.getElementById("start").addEventListener("click", start);
+  async function stopSession(fromStateChange = false) {
+    // 停止本地麦克风
+    try { localMicTrack && localMicTrack.stop(); } catch(_) {}
+
+    // 停止发送端轨道
+    if (pc) {
+      pc.getSenders().forEach(s => {
+        try { s.track && s.track.stop(); } catch(_) {}
+        try { s.replaceTrack(null); } catch(_) {}
+      });
+      // 停止接收端轨道
+      pc.getReceivers().forEach(r => { try { r.track && r.track.stop(); } catch(_) {} });
+      try { pc.close(); } catch(_) {}
+    }
+
+    // 解除远端播放
+    if (remoteStream) {
+      remoteStream.getTracks().forEach(t => { try { t.stop(); } catch(_) {} });
+    }
+    videoElem.srcObject = null;
+
+    // 清空引用，便于下次“开始”重新创建
+    pc = null;
+    audioTransceiver = null;
+    localMicTrack = null;
+    remoteStream = null;
+
+    setUIState(false);
+    if (!fromStateChange) log('会话已结束 ⏹️');
+  }
+
+  // 本地静音/恢复（不重建会话）
+  $('mute').addEventListener('click', () => {
+    if (!localMicTrack) return;
+    localMicTrack.enabled = !localMicTrack.enabled;
+    $('mute').textContent = localMicTrack.enabled ? '静音本地麦克风' : '取消静音';
+  });
+
+  $('start').addEventListener('click', startSession);
+  $('stop').addEventListener('click', () => stopSession());
+
+  // 页面关闭前的兜底清理
+  window.addEventListener('beforeunload', () => stopSession());
 })();
 </script>
 </body>

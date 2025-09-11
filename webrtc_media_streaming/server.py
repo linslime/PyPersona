@@ -158,5 +158,6 @@ def main():
     print(f"▶ Serving on http://{args.host}:{args.port}")
     web.run_app(app, host=args.host, port=args.port)
 
+
 if __name__ == "__main__":
     main()

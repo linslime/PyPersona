@@ -9,10 +9,11 @@
       <change afterPath="$PROJECT_DIR$/data/response_tts_20250908165953.npy" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/response_tts_20250908165953.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dialogue/tts/result1757321640.7404819.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/AudioDynamicRecorder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/sample_audio.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/sample_video.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webrtc_media_streaming/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/webrtc_media_streaming/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webrtc_media_streaming/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/webrtc_media_streaming/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/linslime/code/PyPersona/ER-NeRF/data/obama",
+    "last_opened_file_path": "/home/linslime/code/PyPersona/webrtc_media_streaming",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,6 +75,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webrtc_media_streaming" />
       <recent name="$PROJECT_DIR$/ER-NeRF/data/obama" />
       <recent name="$PROJECT_DIR$/ER-NeRF/data" />
       <recent name="$PROJECT_DIR$/data" />
@@ -234,7 +236,8 @@
       <updated>1757257122379</updated>
       <workItem from="1757257123423" duration="407000" />
       <workItem from="1757257538340" duration="3019000" />
-      <workItem from="1757315134204" duration="18205000" />
+      <workItem from="1757315134204" duration="18804000" />
+      <workItem from="1757583607928" duration="2319000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -276,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757323179939</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=".">
+      <option name="closed" value="true" />
+      <created>1757337913766</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1757337913766</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
