@@ -35,8 +35,10 @@ class AudioRecorder:
 class AudioDynamicRecorder:
 	Volume_Threshold = 5000
 
-	def __init__(self, track):
+	def __init__(self, track, condition, wav_file):
 		self.__track = track
+		self.__condition: asyncio.Condition = condition
+		self.__wav_file: asyncio.Queue = wav_file
 
 	async def start(self):
 		asyncio.ensure_future(self.__receive_audio())
@@ -46,6 +48,7 @@ class AudioDynamicRecorder:
 		true_flag = -1
 		false_flag = -1
 		current_audio_recorder = None
+		file_name = None
 		while True:
 			frame = await self.__track.recv()
 			max_ = np.absolute(frame.to_ndarray()).max()
@@ -71,5 +74,7 @@ class AudioDynamicRecorder:
 					if frame.pts - false_flag > 10000:
 						if frame.pts - true_flag > 30000:
 							current_audio_recorder.stop()
+							await self.__wav_file.put(file_name)
+							await self.__condition.wait()
 						state = 0
 						false_flag = -1
