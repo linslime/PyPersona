@@ -7,7 +7,7 @@ import cv2
 
 class MediaProducer:
 
-	def __init__(self):
+	def __init__(self, video_queue, audio_queue, audio_recorder_condition):
 		self.audio_file_queue = asyncio.Queue(maxsize=1)
 		self.audio_task_queue = asyncio.Queue(maxsize=1)
 		self.video_task_queue = asyncio.Queue(maxsize=1)
@@ -15,9 +15,10 @@ class MediaProducer:
 		self.voiced_video: "asyncio.Queue" = asyncio.Queue(maxsize=10)
 		self.silent_audio: "asyncio.Queue" = asyncio.Queue(maxsize=10)
 		self.silent_video: "asyncio.Queue" = asyncio.Queue(maxsize=10)
-		self.video_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
-		self.audio_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
+		self.video_queue: "asyncio.Queue" = video_queue
+		self.audio_queue: "asyncio.Queue" = audio_queue
 
+		self.audio_recorder_condition = audio_recorder_condition
 		self.state = "silent"
 		self.state_lock = asyncio.Lock()
 		self.video_state = "over"

@@ -22,7 +22,6 @@ from fractions import Fraction
 video_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
 audio_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
 audio_file_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
-audio_response_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
 audio_recorder_condition: "asyncio.Condition" = asyncio.Condition()
 
 
