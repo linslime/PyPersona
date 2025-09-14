@@ -10,6 +10,8 @@ from AudioDynamicRecorder import AudioDynamicRecorder
 from aiohttp import web
 from aiortc import RTCPeerConnection, RTCSessionDescription
 from aiortc.contrib.media import MediaPlayer, MediaRelay
+from MediaProducer import MediaProducer
+import threading
 
 
 video_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
@@ -17,6 +19,9 @@ audio_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
 audio_file_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
 audio_recorder_condition: "asyncio.Condition" = asyncio.Condition()
 
+media_producer: "MediaProducer" = MediaProducer(video_queue, audio_queue, audio_file_queue, audio_recorder_condition)
+media_producer_thread: "threading.Thread" = threading.Thread(target=media_producer.run)
+media_producer_thread.start()
 
 pcs = set()                  # 活跃的 PeerConnections
 relay = MediaRelay()         # 多客户端复用同一解码源

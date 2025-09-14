@@ -7,8 +7,11 @@ import cv2
 
 class MediaProducer:
 
-	def __init__(self, video_queue, audio_queue, audio_recorder_condition):
-		self.audio_file_queue = asyncio.Queue(maxsize=1)
+	def __init__(self, video_queue: "asyncio.Queue",
+	             audio_queue: "asyncio.Queue",
+	             audio_file_queue: "asyncio.Queue",
+	             audio_recorder_condition: "asyncio.Condition"):
+		self.audio_file_queue = audio_file_queue
 		self.audio_task_queue = asyncio.Queue(maxsize=1)
 		self.video_task_queue = asyncio.Queue(maxsize=1)
 		self.voiced_audio: "asyncio.Queue" = asyncio.Queue(maxsize=100)
@@ -52,8 +55,6 @@ class MediaProducer:
 					if data.size == 0:  # 读完了
 						break
 					await self.voiced_audio.put(data)
-					self.audio_state = "start"
-				self.audio_state = "over"
 
 	async def silent_video_frames_producer(self) -> None:
 		while True:
@@ -77,12 +78,11 @@ class MediaProducer:
 				arr = np.random.randint(0, 256, (512, 512, 3), dtype=np.uint8)
 				yield arr
 				await asyncio.sleep(0.1)  # 让出控制权
+
 		while True:
 			path = await self.video_task_queue.get()
 			async for frame in silent_video_frame_generator(path):
 				await self.voiced_video.put(frame)
-				self.video_state = "start"
-			self.video_state = "stop"
 
 	async def audio_frames_producer(self) -> None:
 		while True:
@@ -103,10 +103,20 @@ class MediaProducer:
 			await self.video_queue.put(video_frame)
 
 	async def async_guard(self) -> None:
-		if self.state == "silent" and self.video_state == "start" and self.audio_state == "start":
-			self.state = "start"
-		elif self.state == "voiced" and self.video_state == "over" and self.audio_state == "over":
-			self.state = "silent"
-		await asyncio.sleep(0.3)
+		while True:
+			if self.state == "silent" and not self.voiced_video.empty() and not self.voiced_audio.empty():
+				self.state = "voiced"
+			elif self.state == "voiced" and self.voiced_video.empty() and self.voiced_audio.empty():
+				self.state = "silent"
+				self.audio_recorder_condition.notify_all()
+			await asyncio.sleep(0.3)
 
-
+	async def run(self) -> None:
+		await asyncio.gather(self.task_producer(),
+		                     self.silent_audio_frames_producer(),
+		                     self.voiced_audio_frames_producer(),
+		                     self.silent_video_frames_producer(),
+		                     self.voiced_video_frames_producer(),
+		                     self.audio_frames_producer(),
+		                     self.video_frames_producer(),
+		                     self.async_guard())
