@@ -1,8 +1,8 @@
 import av
 from aiortc.contrib.media import MediaRecorderContext, MediaPlayer, MediaStreamError
-from aiortc.contrib.media import MediaRecorder
+import os
 import numpy as np
-import time
+from datetime import datetime
 import asyncio
 
 
@@ -54,7 +54,7 @@ class AudioDynamicRecorder:
 			max_ = np.absolute(frame.to_ndarray()).max()
 			if state == 0:
 				if max_ >= self.Volume_Threshold:
-					file_name = './task' + str(time.time()) + '.wav'
+					file_name = os.environ.get("PROJECT_ROOT") + '/data/media/task_audio_' + datetime.now().strftime("%Y%m%d%H%M%S") + '.wav'
 					current_audio_recorder = AudioRecorder(file_name)
 					current_audio_recorder.start()
 					current_audio_recorder.add_frame(frame)
@@ -75,6 +75,7 @@ class AudioDynamicRecorder:
 						if frame.pts - true_flag > 30000:
 							current_audio_recorder.stop()
 							await self.__wav_file.put(file_name)
-							await self.__condition.wait()
+							async with self.__condition:
+								await self.__condition.wait()
 						state = 0
 						false_flag = -1

@@ -40,9 +40,9 @@ class MediaProducer:
 
 	async def silent_audio_frames_producer(self) -> None:
 		while True:
-			await self.silent_audio.put(np.zeros((1024, 2), dtype=np.int16))
+			await self.silent_audio.put(np.zeros((1764, 1), dtype=np.int16))
 
-	async def voiced_audio_frames_producer(self, block_size: int = 1024) -> None:
+	async def voiced_audio_frames_producer(self, block_size: int = 1764) -> None:
 		"""
 		生产者: 读取 wav 音频, 按块(block_size)放入队列, 最后放 None 表示结束
 		"""
@@ -89,18 +89,20 @@ class MediaProducer:
 			audio_frame = None
 			if self.state == "silent":
 				audio_frame = await self.silent_audio.get()
+				await self.audio_queue.put(audio_frame)
 			elif self.state == "voiced":
 				audio_frame = await self.voiced_audio.get()
-			await self.audio_queue.put(audio_frame)
+				await self.audio_queue.put(audio_frame)
 
 	async def video_frames_producer(self) -> None:
 		while True:
 			video_frame = None
 			if self.state == "silent":
 				video_frame = await self.silent_video.get()
+				await self.video_queue.put(video_frame)
 			elif self.state == "voiced":
 				video_frame = await self.voiced_video.get()
-			await self.video_queue.put(video_frame)
+				await self.video_queue.put(video_frame)
 
 	async def async_guard(self) -> None:
 		while True:
@@ -108,7 +110,8 @@ class MediaProducer:
 				self.state = "voiced"
 			elif self.state == "voiced" and self.voiced_video.empty() and self.voiced_audio.empty():
 				self.state = "silent"
-				self.audio_recorder_condition.notify_all()
+				async with self.audio_recorder_condition:
+					self.audio_recorder_condition.notify_all()
 			await asyncio.sleep(0.3)
 
 	async def run(self) -> None:

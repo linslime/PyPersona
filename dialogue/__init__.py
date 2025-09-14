@@ -1,6 +1,6 @@
-from asr import asr
-from llm import llm
-from tts import tts
+from dialogue.asr import asr
+from dialogue.llm import llm
+from dialogue.tts import tts
 from datetime import datetime
 
 class dialogue:
@@ -14,6 +14,7 @@ class dialogue:
 		response = self.llm.run(query)
 		wav = self.tts.run(response)
 		return wav
+
 
 if __name__ == '__main__':
 	di = dialogue()

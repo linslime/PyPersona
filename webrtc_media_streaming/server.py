@@ -12,7 +12,9 @@ from aiortc import RTCPeerConnection, RTCSessionDescription
 from aiortc.contrib.media import MediaPlayer, MediaRelay
 from MediaProducer import MediaProducer
 import threading
-
+from MediaTrack import VideoStreamTrack, AudioStreamTrack
+import os
+os.environ["PROJECT_ROOT"] = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 video_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
 audio_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
@@ -20,7 +22,7 @@ audio_file_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
 audio_recorder_condition: "asyncio.Condition" = asyncio.Condition()
 
 media_producer: "MediaProducer" = MediaProducer(video_queue, audio_queue, audio_file_queue, audio_recorder_condition)
-media_producer_thread: "threading.Thread" = threading.Thread(target=media_producer.run)
+media_producer_thread: "threading.Thread" = threading.Thread(target=lambda: asyncio.run(media_producer.run()))
 media_producer_thread.start()
 
 pcs = set()                  # 活跃的 PeerConnections
@@ -58,13 +60,10 @@ async def offer(request: web.Request):
             await pc.close()
             pcs.discard(pc)
 
-    # 加载音视频文件
-    video_src = MediaPlayer(request.app["video_path"], format=None).video
-    audio_src = MediaPlayer(request.app["audio_path"], format=None).audio
 
     # 通过 relay 订阅（支持多客户端共享解码器）
-    pc.addTrack(relay.subscribe(video_src))
-    pc.addTrack(relay.subscribe(audio_src))
+    pc.addTrack(VideoStreamTrack(video_queue))
+    pc.addTrack(AudioStreamTrack(audio_queue))
 
     # WebRTC SDP 交换
     await pc.setRemoteDescription(offer)

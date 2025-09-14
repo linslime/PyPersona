@@ -3,6 +3,7 @@ import time
 from io import BytesIO
 from pydub import AudioSegment
 from datetime import datetime
+import os
 
 
 class tts:
@@ -22,8 +23,10 @@ class tts:
         mp3_stream = BytesIO(result)
         audio = AudioSegment.from_file(mp3_stream, format="mp3")
         audio = audio.set_frame_rate(44100).set_channels(1)
-        audio.export('./response_tts_' + datetime.now().strftime("%Y%m%d%H%M%S") + '.wav', format="wav")
-        return result
+        audio_path = os.environ.get("PROJECT_ROOT") + '/data/media/response_audio_' + datetime.now().strftime("%Y%m%d%H%M%S") + '.wav'
+        audio.export(audio_path, format="wav")
+        return audio_path
+
 
 if __name__ == '__main__':
     start = time.time()
