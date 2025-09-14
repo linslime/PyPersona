@@ -10,15 +10,8 @@ from AudioDynamicRecorder import AudioDynamicRecorder
 from aiohttp import web
 from aiortc import RTCPeerConnection, RTCSessionDescription
 from aiortc.contrib.media import MediaPlayer, MediaRelay
-import numpy as np
-from av import VideoFrame
-from av import AudioFrame
-from dataclasses import dataclass
-from aiortc.contrib.media import MediaPlayer, MediaStreamTrack
-from fractions import Fraction
-# ===============================
-# 你的异步队列（在别处生产帧后 put 进来）
-# ===============================
+
+
 video_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
 audio_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
 audio_file_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
@@ -28,10 +21,12 @@ audio_recorder_condition: "asyncio.Condition" = asyncio.Condition()
 pcs = set()                  # 活跃的 PeerConnections
 relay = MediaRelay()         # 多客户端复用同一解码源
 
+
 # ---------------------- 路由处理 ---------------------- #
 async def index(request: web.Request):
     """返回前端页面"""
     return web.FileResponse(Path(__file__).parent / "static" / "index.html")
+
 
 async def offer(request: web.Request):
     """处理浏览器发送的 SDP offer，返回 answer"""
@@ -76,13 +71,13 @@ async def offer(request: web.Request):
         "type": pc.localDescription.type,
     })
 
+
 async def on_shutdown(app: web.Application):
     # 关闭所有活动连接
     coros = [pc.close() for pc in pcs]
     await asyncio.gather(*coros)
     pcs.clear()
 
-# ---------------------- 启动脚本 ---------------------- #
 
 def main():
     parser = argparse.ArgumentParser(description="WebRTC media streamer (Python backend)")
