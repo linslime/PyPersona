@@ -94,6 +94,12 @@ class AudioStreamTrack(MediaStreamTrack):
         # 取一帧 (1764,1) int16
         arr = await self.queue.get()
 
+        if arr.shape[0] < self.samples_per_frame:
+            temp_arr = np.zeros((self.samples_per_frame,), dtype=arr.dtype)
+            temp_arr[:arr.shape[0]] = arr
+            arr = temp_arr
+
+        print(arr.shape)
         # 匀速节流：尽量按 25fps 等间隔输出
         if self._pace:
             now = asyncio.get_event_loop().time()

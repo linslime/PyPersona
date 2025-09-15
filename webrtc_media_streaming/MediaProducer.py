@@ -37,7 +37,7 @@ class MediaProducer:
 
 	async def silent_audio_frames_producer(self) -> None:
 		while True:
-			await self.silent_audio.put(np.zeros((1764, 1), dtype=np.int16))
+			await self.silent_audio.put(np.zeros((1764,), dtype=np.int16))
 
 	async def voiced_audio_frames_producer(self, block_size: int = 1764) -> None:
 		"""
@@ -82,37 +82,33 @@ class MediaProducer:
 	async def audio_frames_producer(self) -> None:
 		while True:
 			audio_frame = None
-			await self.state_lock.acquire()
-			if self.state == "silent":
-				audio_frame = await self.silent_audio.get()
-			elif self.state == "voiced":
+			# print("state:", "voiced", self.voiced_video.qsize(), self.voiced_audio.qsize())
+			if not self.voiced_audio.empty():
 				audio_frame = await self.voiced_audio.get()
-			self.state_lock.release()
+			else:
+				audio_frame = await self.silent_audio.get()
 			await self.audio_queue.put(audio_frame)
 
 	async def video_frames_producer(self) -> None:
 		while True:
 			video_frame = None
-			await self.state_lock.acquire()
-			if self.state == "silent":
-				video_frame = await self.silent_video.get()
-			elif self.state == "voiced":
+			if not self.voiced_video.empty():
 				video_frame = await self.voiced_video.get()
-			self.state_lock.release()
+			else:
+				video_frame = await self.silent_video.get()
 			await self.video_queue.put(video_frame)
 
 	async def async_guard(self) -> None:
 		while True:
-			await self.state_lock.acquire()
+
 			if self.state == "silent" and not self.voiced_video.empty() and not self.voiced_audio.empty():
 				self.state = "voiced"
-				print("state:", "voiced", self.voiced_video.qsize(), self.voiced_audio.qsize())
+
 			elif self.state == "voiced" and self.voiced_video.empty() and self.voiced_audio.empty():
 				self.state = "silent"
 				async with self.audio_recorder_condition:
 					self.audio_recorder_condition.notify_all()
-					print("已经结束播放有声内容")
-			self.state_lock.release()
+					# print("已经结束播放有声内容", "voiced_audio", self.voiced_audio.qsize())
 			await asyncio.sleep(0.3)
 
 	async def run(self) -> None:

@@ -5,65 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a122b49c-1f1f-4100-a856-470543d99e55" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915133928.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915133940.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915134258.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915134310.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915134830.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915134850.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915135313.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915135332.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915142104.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915142157.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915142532.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915142637.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915143920.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915143954.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915144413.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915144510.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915144754.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915145035.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915145102.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915133924.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915133937.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915134254.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915134307.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915134825.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915134848.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915135309.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915135330.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142100.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142105.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142138.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142154.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142502.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142634.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915143916.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915143922.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915143945.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915143951.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144409.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144416.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144418.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144447.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144450.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144451.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144452.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144453.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144459.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144500.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144502.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144503.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144505.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144506.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144745.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144750.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145003.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145024.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145031.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145054.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145055.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145058.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915220120.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915220135.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915220654.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915220707.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915221037.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915221100.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915221320.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915221342.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915221523.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915221557.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915222403.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915222430.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915223650.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915223711.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915224256.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915224307.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915220116.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915220129.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915220650.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915220704.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915221033.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915221053.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915221316.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915221340.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915221520.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915221554.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915222359.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915222405.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915222425.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915223646.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915223708.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915224252.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915224258.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915224304.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915224305.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/query.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/response_tts_20250908165953.npy" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/response_tts_20250908165953.wav" afterDir="false" />
@@ -71,9 +47,8 @@
       <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/sample_video.mp4" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webrtc_media_streaming/AudioDynamicRecorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/webrtc_media_streaming/AudioDynamicRecorder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webrtc_media_streaming/MediaProducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/webrtc_media_streaming/MediaProducer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webrtc_media_streaming/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/webrtc_media_streaming/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webrtc_media_streaming/MediaTrack.py" beforeDir="false" afterPath="$PROJECT_DIR$/webrtc_media_streaming/MediaTrack.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -399,7 +374,7 @@
       <workItem from="1757674615472" duration="15616000" />
       <workItem from="1757761043646" duration="10407000" />
       <workItem from="1757849271448" duration="15324000" />
-      <workItem from="1757909317118" duration="14604000" />
+      <workItem from="1757909317118" duration="20609000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -489,7 +464,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757869066038</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary=".">
+      <option name="closed" value="true" />
+      <created>1757939707092</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1757939707092</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +500,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PyPersona$main.coverage" NAME="main Coverage Results" MODIFIED="1757322584560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ER-NeRF" />
     <SUITE FILE_PATH="coverage/PyPersona$extract_ds_features.coverage" NAME="extract_ds_features Coverage Results" MODIFIED="1757322214721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ER-NeRF/data_utils/deepspeech_features" />
-    <SUITE FILE_PATH="coverage/PyPersona$server.coverage" NAME="server Coverage Results" MODIFIED="1757918981588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webrtc_media_streaming" />
+    <SUITE FILE_PATH="coverage/PyPersona$server.coverage" NAME="server Coverage Results" MODIFIED="1757947354483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webrtc_media_streaming" />
     <SUITE FILE_PATH="coverage/PyPersona$demo.coverage" NAME="demo Coverage Results" MODIFIED="1757319281154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webrtc_media_streaming" />
     <SUITE FILE_PATH="coverage/PyPersona$AudioProducer.coverage" NAME="AudioProducer Coverage Results" MODIFIED="1757771638858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webrtc_media_streaming" />
     <SUITE FILE_PATH="coverage/PyPersona$dialogue__init__.coverage" NAME="dialogue__init__ Coverage Results" MODIFIED="1757321986541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue" />
