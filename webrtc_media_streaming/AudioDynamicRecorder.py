@@ -75,6 +75,7 @@ class AudioDynamicRecorder:
 						if frame.pts - true_flag > 30000:
 							current_audio_recorder.stop()
 							await self.__wav_file.put(file_name)
+							print("已经录制完毕", file_name)
 							async with self.__condition:
 								await self.__condition.wait()
 						state = 0

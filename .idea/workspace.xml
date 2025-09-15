@@ -5,17 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a122b49c-1f1f-4100-a856-470543d99e55" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915133928.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915133940.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915134258.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915134310.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915134830.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915134850.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915135313.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915135332.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915142104.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915142157.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915142532.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915142637.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915143920.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915143954.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915144413.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915144510.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915144754.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915145035.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/response_audio_20250915145102.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915133924.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915133937.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915134254.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915134307.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915134825.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915134848.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915135309.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915135330.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142100.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142105.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142138.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142154.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142502.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915142634.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915143916.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915143922.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915143945.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915143951.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144409.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144416.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144418.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144447.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144450.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144451.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144452.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144453.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144459.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144500.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144502.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144503.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144505.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144506.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144745.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915144750.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145003.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145024.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145031.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145054.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145055.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/media/task_audio_20250915145058.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/query.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/response_tts_20250908165953.npy" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/data/response_tts_20250908165953.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dialogue/tts/result1757321640.7404819.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/DialogueProducer.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/sample_audio.wav" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/sample_video.mp4" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webrtc_media_streaming/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PyPersona.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PyPersona.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webrtc_media_streaming/AudioProducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/webrtc_media_streaming/AudioProducer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webrtc_media_streaming/AudioDynamicRecorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/webrtc_media_streaming/AudioDynamicRecorder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webrtc_media_streaming/MediaProducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/webrtc_media_streaming/MediaProducer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webrtc_media_streaming/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/webrtc_media_streaming/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +123,7 @@
     &quot;Python.dialogue__init__.executor&quot;: &quot;Run&quot;,
     &quot;Python.extract_ds_features.executor&quot;: &quot;Debug&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -91,7 +149,7 @@
       <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.server">
     <configuration name="AudioProducer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyPersona" />
       <option name="ENV_FILES" value="" />
@@ -184,7 +242,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dialogue__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyPersona" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -230,29 +288,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="extract_ds_features" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PyPersona" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ER-NeRF/data_utils/deepspeech_features" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ER-NeRF/data_utils/deepspeech_features/extract_ds_features.py" />
-      <option name="PARAMETERS" value="--input $PROJECT_DIR$/data/response_tts_20250908165953.wav" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyPersona" />
       <option name="ENV_FILES" value="" />
@@ -276,7 +311,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PyPersona" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -285,13 +320,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ER-NeRF" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/webrtc_media_streaming" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ER-NeRF/main.py" />
-      <option name="PARAMETERS" value="data/obama/ --workspace trial_obama_torso/ -O --torso --test --test_train --aud data/obama/aud_ds.npy" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/webrtc_media_streaming/server.py" />
+      <option name="PARAMETERS" value="--video $PROJECT_DIR$/webrtc_media_streaming/sample_video.mp4 --audio $PROJECT_DIR$/webrtc_media_streaming/sample_audio.wav --port 8080" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -323,20 +358,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.AudioProducer" />
-      <item itemvalue="Python.VedioProducer" />
-      <item itemvalue="Python.dialogue__init__" />
       <item itemvalue="Python.extract_ds_features" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.__init__" />
+      <item itemvalue="Python.server" />
       <item itemvalue="Python.test" />
+      <item itemvalue="Python.AudioProducer" />
+      <item itemvalue="Python.VedioProducer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.server" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.__init__" />
         <item itemvalue="Python.AudioProducer" />
         <item itemvalue="Python.VedioProducer" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.extract_ds_features" />
       </list>
     </recent_temporary>
   </component>
@@ -362,6 +398,8 @@
       <workItem from="1757583607928" duration="4736000" />
       <workItem from="1757674615472" duration="15616000" />
       <workItem from="1757761043646" duration="10407000" />
+      <workItem from="1757849271448" duration="15324000" />
+      <workItem from="1757909317118" duration="14604000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -427,7 +465,31 @@
       <option name="project" value="LOCAL" />
       <updated>1757685239516</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary=".">
+      <option name="closed" value="true" />
+      <created>1757849582231</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1757849582231</updated>
+    </task>
+    <task id="LOCAL-00010" summary=".">
+      <option name="closed" value="true" />
+      <created>1757853083933</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1757853083933</updated>
+    </task>
+    <task id="LOCAL-00011" summary=".">
+      <option name="closed" value="true" />
+      <created>1757869066038</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1757869066038</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,11 +517,12 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PyPersona$main.coverage" NAME="main Coverage Results" MODIFIED="1757322584560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ER-NeRF" />
     <SUITE FILE_PATH="coverage/PyPersona$extract_ds_features.coverage" NAME="extract_ds_features Coverage Results" MODIFIED="1757322214721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ER-NeRF/data_utils/deepspeech_features" />
+    <SUITE FILE_PATH="coverage/PyPersona$server.coverage" NAME="server Coverage Results" MODIFIED="1757918981588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webrtc_media_streaming" />
     <SUITE FILE_PATH="coverage/PyPersona$demo.coverage" NAME="demo Coverage Results" MODIFIED="1757319281154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webrtc_media_streaming" />
     <SUITE FILE_PATH="coverage/PyPersona$AudioProducer.coverage" NAME="AudioProducer Coverage Results" MODIFIED="1757771638858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webrtc_media_streaming" />
     <SUITE FILE_PATH="coverage/PyPersona$dialogue__init__.coverage" NAME="dialogue__init__ Coverage Results" MODIFIED="1757321986541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue" />
-    <SUITE FILE_PATH="coverage/PyPersona$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1757321639649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue/tts" />
+    <SUITE FILE_PATH="coverage/PyPersona$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1757867562220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dialogue" />
     <SUITE FILE_PATH="coverage/PyPersona$VedioProducer.coverage" NAME="VedioProducer Coverage Results" MODIFIED="1757771146969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webrtc_media_streaming" />
-    <SUITE FILE_PATH="coverage/PyPersona$test.coverage" NAME="test Coverage Results" MODIFIED="1757771926593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webrtc_media_streaming" />
+    <SUITE FILE_PATH="coverage/PyPersona$test.coverage" NAME="test Coverage Results" MODIFIED="1757913304504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webrtc_media_streaming" />
   </component>
 </project>

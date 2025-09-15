@@ -22,8 +22,7 @@ audio_file_queue: "asyncio.Queue" = asyncio.Queue(maxsize=1)
 audio_recorder_condition: "asyncio.Condition" = asyncio.Condition()
 
 media_producer: "MediaProducer" = MediaProducer(video_queue, audio_queue, audio_file_queue, audio_recorder_condition)
-media_producer_thread: "threading.Thread" = threading.Thread(target=lambda: asyncio.run(media_producer.run()))
-media_producer_thread.start()
+
 
 pcs = set()                  # 活跃的 PeerConnections
 relay = MediaRelay()         # 多客户端复用同一解码源
@@ -45,6 +44,8 @@ async def offer(request: web.Request):
     pcs.add(pc)
     print("Created PC %s" % id(pc))
 
+    task = asyncio.create_task(media_producer.run())
+
     @pc.on("track")
     async def on_track(track):
         print("======= received track: ", track)
@@ -59,7 +60,6 @@ async def offer(request: web.Request):
         if pc.connectionState in ("failed", "closed", "disconnected"):
             await pc.close()
             pcs.discard(pc)
-
 
     # 通过 relay 订阅（支持多客户端共享解码器）
     pc.addTrack(VideoStreamTrack(video_queue))
