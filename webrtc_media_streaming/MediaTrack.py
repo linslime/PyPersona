@@ -99,7 +99,6 @@ class AudioStreamTrack(MediaStreamTrack):
             temp_arr[:arr.shape[0]] = arr
             arr = temp_arr
 
-        print(arr.shape)
         # 匀速节流：尽量按 25fps 等间隔输出
         if self._pace:
             now = asyncio.get_event_loop().time()
