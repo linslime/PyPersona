@@ -95,7 +95,7 @@ def storePly(path, xyz, rgb):
     ply_data = PlyData([vertex_element])
     ply_data.write(path)
 
-def readCamerasFromTransforms(path, transformsfile, white_background, extension=".jpg", audio_file='', audio_extractor='deepspeech', preload=True):
+def readCamerasFromTransforms(path, transformsfile, white_background, extension=".jpg", audio_file='', audio_extractor='deepspeech', preload=False):
     cam_infos = []
     postfix_dict = {"deepspeech": "ds", "esperanto": "eo", "hubert": "hu"}
 
