@@ -57,11 +57,11 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoi
     gaussians.training_setup(opt)
     gaussians_mouth.training_setup(opt)
 
-    (model_params, motion_params, _, _) = torch.load(os.path.join(scene.model_path, "chkpnt_face_latest.pth"))
+    (model_params, motion_params, _, _) = torch.load(os.path.join(scene.model_path, "chkpnt_face_latest.pth"), weights_only=False)
     gaussians.restore(model_params, opt)
     motion_net.load_state_dict(motion_params)
 
-    (model_params, motion_params, _, _) = torch.load(os.path.join(scene.model_path, "chkpnt_mouth_latest.pth"))
+    (model_params, motion_params, _, _) = torch.load(os.path.join(scene.model_path, "chkpnt_mouth_latest.pth"), weights_only=False)
     gaussians_mouth.restore(model_params, opt)
     motion_net_mouth.load_state_dict(motion_params)
 
